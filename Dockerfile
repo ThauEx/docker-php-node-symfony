@@ -1,6 +1,7 @@
 FROM php:7.2
 
 RUN \
+    curl -sSL https://deb.nodesource.com/setup_10.x | bash - && \
     apt-get update && \
     apt-get install -y \
       zip \
@@ -29,7 +30,6 @@ RUN \
       zip \
       bcmath && \
     curl -sSL https://getcomposer.org/installer | php  -- --install-dir=/usr/local/bin --filename=composer && \
-    curl -sSL https://deb.nodesource.com/setup_10.x | bash - && \
     curl -sSL https://get.symfony.com/cli/installer | bash - && \
     mv ~/.symfony/bin/symfony /usr/local/bin/symfony && \
     composer global require hirak/prestissimo && \
