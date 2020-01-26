@@ -19,7 +19,7 @@ RUN \
       --no-install-recommends && \
     pecl install apcu && \
     docker-php-ext-enable apcu && \
-    docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ && \
+    docker-php-ext-configure gd --with-freetype --with-jpeg && \
     docker-php-ext-install -j$(nproc) \
       iconv \
       pdo \
