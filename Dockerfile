@@ -5,6 +5,7 @@ RUN \
     apt-get update && \
     apt-get install -y \
       zip \
+      libzip-dev \
       unzip \
       bzip2 \
       zlib1g-dev \
