@@ -1,7 +1,7 @@
-FROM php:7.2
+FROM php:7.4
 
 RUN \
-    curl -sSL https://deb.nodesource.com/setup_10.x | bash - && \
+    curl -sSL https://deb.nodesource.com/setup_12.x | bash - && \
     apt-get update && \
     apt-get install -y \
       zip \
